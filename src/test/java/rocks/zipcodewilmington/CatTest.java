@@ -20,6 +20,25 @@ public class CatTest {
 
 
     @Test
+    public void setNameTest() {
+        //Given (String name)
+
+        String name = "Jetty";
+        Date birthdate = new Date();
+        Cat cat = new Cat(name, birthdate, 1);
+        String expectedName = "Cali";
+
+
+        //When a name is given
+        cat.setName(expectedName);
+
+
+
+        //Then we expect the name given to come out
+        Assert.assertEquals(expectedName, cat.getName());
+    }
+
+    @Test
     public void constructorTest() {
         // Given (cat data)
         String givenName = "Zula";
